@@ -15,12 +15,106 @@
     align-items: center;
     width: 50%;
     height: 100%;
-    border: 1px solid black;
+}
+
+.FormLeft {
+    
+    img {
+        width: 70%;
+    }
 }
 
 .FormInfo {
     width: 80%;
     height: 40%;
-    border: 1px solid black;
+    // border: 1px solid black;
 }
 
+.FormLogin {
+    font-family: 'Gotham', sans-serif;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+
+    button {
+        width: 40%;
+        font-size: 1em;
+        color: $raisin-black;
+        font-weight: 900;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 10px;
+        background-color: $raisin-black;
+        border: 0px;
+        background-color: white;
+        transition: 0.1s cubic-bezier(.66,-0.21,.31,1.36);
+        
+    }
+
+    button:hover {
+        width: 60%;
+        font-size: 1.2em;
+        color: $raisin-black;
+        font-weight: 900;
+        margin-top: 10px;
+        border-radius: 10px;
+        background-color: $raisin-black;
+        background-color: white;
+        transition: 0.1s cubic-bezier(.66,-0.21,.31,1.36);
+        
+    }
+
+    input {
+        
+        font-weight: 900;
+        width: 80%;
+    }
+}
+
+.ant-form {
+    color: $raisin-black;
+    font-size: 0.8em;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px;
+
+    input {
+        border-radius: 0px;
+        background-color: transparent;
+        border: 0px;
+        border-bottom: 2px solid $raisin-black;
+        margin-bottom: 4em;
+        height: 40px;
+    }
+
+    label {
+
+        font-size: 1.3em;
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+
+}
+
+.RegisterHelp {
+
+    display: flex;
+    width: 100%;
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 4em;
+    }
+
+    li {
+
+        
+        display: inline;
+        list-style: none;
+        
+    }
+
+}
