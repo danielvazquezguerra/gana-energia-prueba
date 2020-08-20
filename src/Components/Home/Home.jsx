@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.scss';
 
 
 
@@ -8,8 +9,8 @@ const Home = () => {
 
         <div>
 
-            <p>hola</p>
-            
+        
+
         </div>
     )
 }
