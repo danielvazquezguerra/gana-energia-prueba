@@ -1,0 +1,54 @@
+.HomeMain {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+}
+
+.HomeMainLeft {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    z-index: 5;
+}
+
+.HomeMainRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    z-index: 5;
+
+    .TextoLead {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+
+        button {
+        
+            width: 300px;
+            height: 50px;
+            background-color: white;
+            border: 0px;
+            background-color: white;
+            font-weight: 800;
+            font-size: 1em;
+            font-family: 'Gotham', sans-serif;
+            cursor: pointer;
+            border-radius: 10px;
+           
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+
+    
+}
+
