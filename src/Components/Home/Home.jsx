@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.scss';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -16,7 +17,8 @@ const Home = () => {
                 <div className="TextoLead">
 
                     <img src="images/100-renovable.png" alt="energia 100% renovable"/>
-                     <button className="LlamamosButton">Te llamamos?</button>
+                     {/* <button action="/info" className="LlamamosButton">Te llamamos?</button> */}
+                     <NavLink className="LlamamosButton" to='/info' exact>Te llamamos?</NavLink>
                     
                 </div>
 
