@@ -4,6 +4,7 @@ import { Form, Input, Button, notification } from 'antd';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
+
 const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
@@ -19,19 +20,13 @@ const FormLeads = () =>  {
     
     const onFinish = (event) => {
 
-        // event.preventDefault();
+        const TOKEN = "00D5J000000nLCV!ARUAQHsTVqBex65MLGalOjQ5Xz253ZfNvxSfoPAhfi_7wSwEOkxqeVw0AtvmSmZ_3LF49kyIEIlVdaIezKhUpxnryw03PmhM";
+        
+        console.log(event);
 
-        const formData = new FormData();
-
-            formData.set('Lastname', event.target.Lastname.value)
-            formData.set('PersonalEmail', event.target.PersonEmail.value)
-            formData.set('PersonMobilePhone', event.target.PersonMobilePhone.value)
-
-            
-
-          axios.post('https://ganaenergia.my.salesforce.com/services/apexrest/v1/Subscriptions/prueba', formData, {
+        axios.post('https://ganaenergia.my.salesforce.com/services/apexrest/v1/Subscriptions/prueba', event, {
   
-            headers: { authorization: '00D5J000000nLCV!ARUAQHsTVqBex65MLGalOjQ5Xz253ZfNvxSfoPAhfi_7wSwEOkxqeVw0AtvmSmZ_3LF49kyIEIlVdaIezKhUpxnryw03PmhM'}
+            headers: { Authorization: `Bearer ${TOKEN}`}
   
           })
   
@@ -43,9 +38,9 @@ const FormLeads = () =>  {
               })
               .catch(console.error)
        
-              event.target.Lastname.value = "";
-              event.target.PersonalEmail.value = "";
-              event.target.PersonMobilePhone.value = "";
+            //   event.Lastname = "";
+            //   event.PersonalEmail = "";
+            //   event.PersonMobilePhone = "";
         
       }
 
