@@ -16,16 +16,35 @@ const tailLayout = {
 const FormLeads = () =>  {
 
     const history = useHistory();
-    const onFinish = user => {
-        axios.post('esperando_token_', user)
-            .then(() => {
-                notification.success({ message: 'Datos enviados' });
-                history.push('/')
-            })
-            .catch(console.error)
-    }
+    
+    const onFinish = (event) => {
+        // event.preventDefault();
 
+        const formData = new FormData();
 
+            formData.set('nombre', event.target.Lastname.value)
+            formData.set('email', event.target.PersonEmail.value)
+            formData.set('telefono', event.target.PersonMobilePhone.value)
+
+          axios.post('https://ganaenergia.my.salesforce.com/services/apexrest/v1/subscriptions/prueba', formData, {
+  
+            headers: { authorization: '00D5J000000nLCV!ARUAQHsTVqBex65MLGalOjQ5Xz253ZfNvxSfoPAhfi_7wSwEOkxqeVw0AtvmSmZ_3LF49kyIEIlVdaIezKhUpxnryw03PmhM'}
+  
+          })
+  
+              .then(() => {
+  
+                  notification.success({ message: 'Datos enviados' });
+                  history.push('/')
+  
+              })
+              .catch(console.error)
+       
+              event.target.Lastname.value = "";
+              event.target.PersonalEmail.value = "";
+              event.target.PersonMobilePhone.value = "";
+        
+      }
 
     return (
 
@@ -46,13 +65,13 @@ const FormLeads = () =>  {
                         onFinishFailed={console.error} >
                         <Form.Item
                             label="Nombre"
-                            name="name"
+                            name="Lastname"
                         >
                             <Input />
                         </Form.Item>
                         <Form.Item
                             label="Email"
-                            name="email"
+                            name="PersonalEmail"
                             rules={[{ required: true, message: 'El email es requerido' }]}
                         >
                             <Input />
@@ -60,7 +79,7 @@ const FormLeads = () =>  {
 
                         <Form.Item
                             label="Telefono"
-                            name="telefono"
+                            name="PersonMobilePhone"
                             rules={[{ required: true, message: 'El telefono es requerido' }]}
                         >
                             <Input />
