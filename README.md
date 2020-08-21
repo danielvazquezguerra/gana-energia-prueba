@@ -1,16 +1,17 @@
 # Gana Energía. 
 
 **Hola chicos! Primero que nada:** 
-Gracias por la oportunidad! Entrego el proyecto hasta donde pude llegar. Tuve un muro en la petición POST para obtener el TOKEN y poder continuar con la conexión. Por alguna razón me decia CLIENT_ID inválido, pero estoy casi seguro que es por la ruta de acceso que no he podido averiguar bien si es la correcta ( o no se cual es la de ENTORNO) el formulario está creado para seguir trabajando cuando pueda resolver este paso.
+Gracias por la oportunidad! Entrego el proyecto hasta donde pude llegar. Todo está OK, excepto al hacer la petición POST por el FRONT me da un error de CORS
+que no me lo da por el POSTMAN donde si funciona bien, respndiendo un 200 OK. Me parece que debería utilizar un middleware por BACK. 
 
 ## Prueba Técnica-
 Las condiciones eran las siguientes: 
 Debía generar un LANDING PAGE para captar nuevos LEADS conectandola a una API. 
 
 **Enviando los siguientes datos:** 
- 1. Nombre: Prueba1
- 2. Email: prueba1@gmail.com
- 3. Telefono: 666111331
+ 1. Nombre: Prueba1 (LastName)
+ 2. Email: prueba1@gmail.com (PersonalEmail)
+ 3. Telefono: 666111331 (PersonMobilePhone)
  
 
 ## Como lo hice? 
