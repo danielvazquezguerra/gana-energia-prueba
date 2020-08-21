@@ -18,15 +18,18 @@ const FormLeads = () =>  {
     const history = useHistory();
     
     const onFinish = (event) => {
+
         // event.preventDefault();
 
         const formData = new FormData();
 
-            formData.set('nombre', event.target.Lastname.value)
-            formData.set('email', event.target.PersonEmail.value)
-            formData.set('telefono', event.target.PersonMobilePhone.value)
+            formData.set('Lastname', event.target.Lastname.value)
+            formData.set('PersonalEmail', event.target.PersonEmail.value)
+            formData.set('PersonMobilePhone', event.target.PersonMobilePhone.value)
 
-          axios.post('https://ganaenergia.my.salesforce.com/services/apexrest/v1/subscriptions/prueba', formData, {
+            
+
+          axios.post('https://ganaenergia.my.salesforce.com/services/apexrest/v1/Subscriptions/prueba', formData, {
   
             headers: { authorization: '00D5J000000nLCV!ARUAQHsTVqBex65MLGalOjQ5Xz253ZfNvxSfoPAhfi_7wSwEOkxqeVw0AtvmSmZ_3LF49kyIEIlVdaIezKhUpxnryw03PmhM'}
   
@@ -58,7 +61,7 @@ const FormLeads = () =>  {
 
             <div className="Form FormRight">
 
-                                <Form
+                                <Form 
                         className="FormLogin"
                         {...layout}
                         onFinish={onFinish}
